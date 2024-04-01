@@ -1,0 +1,13 @@
+name: test
+on: [push]
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - name: step 1
+        shell: bash
+        run: |
+          echo "hello"
+  only:
+    - v.*.*
+    - main
