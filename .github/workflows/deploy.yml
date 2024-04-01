@@ -1,14 +1,17 @@
 name: test
-on: push
-  jobs:
-    print:
-      runs-on: ubuntu-latest
-      steps:
-        - name: step 1
-          shell: bash
-          run: |
-            echo "hello"
-  branches:
-    - main
-  tags:
-    - v.*.*
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - v.*.*
+
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - name: step 1
+        shell: bash
+        run: |
+          echo "hello"
+
